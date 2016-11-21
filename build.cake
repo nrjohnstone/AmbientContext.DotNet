@@ -83,7 +83,7 @@ Task("Pack-Nuget")
 Task("Run-Unit-Tests")
     .Does(() =>
 {
-    var testAssemblies = GetFiles(".\\test\\AmbientContext.DotNet.Tests\\bin\\" + configuration + "\\net451\\*\\AmbientContext.Tests.dll");
+    var testAssemblies = GetFiles(".\\test\\AmbientContext.DotNet.Tests\\bin\\" + configuration + "\\net451\\*\\*.Tests.dll");
     Console.WriteLine(testAssemblies.Count());
     XUnit2(testAssemblies);
 });
